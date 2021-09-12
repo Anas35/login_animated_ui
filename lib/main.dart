@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenge/log_in_animation/log_in_animation.dart';
+import 'package:login_animated_ui/login_animation.dart';
 
-void main() {
-  runApp(
-    MyApp(),
-  );
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white.withOpacity(0.5),
-        primaryColor: Color(0xFF0278ae),
-        accentColor: Colors.white,
-        buttonTheme: Theme.of(context).buttonTheme.copyWith(
-          buttonColor: Colors.white,
-          textTheme: ButtonTextTheme.accent,
-          colorScheme: Theme.of(context).colorScheme.copyWith(secondary: Colors.black87),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          backgroundColor: Color(0xFFCCCBCD),
+          body: LoginAnimation(),
         ),
-      ),
-      home: Scaffold(
-        body: LoginAnimation(),
       ),
     );
   }

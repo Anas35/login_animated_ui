@@ -1,4 +1,4 @@
-package com.anas.flutter_ui_challenge
+package com.example.login_animated_ui
 
 import io.flutter.embedding.android.FlutterActivity
 
